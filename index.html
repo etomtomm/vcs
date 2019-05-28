@@ -26,7 +26,7 @@
         </pre>
         </li>
         <li>
-            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ git init
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ sudo apt install git
         </pre>
         </li>
         <li>
@@ -34,13 +34,54 @@
         </pre>
         </li>
         <li>
-            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ git config --list
-        </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ git config --global user.name &quot;EtomtomM&quot;</pre>
         </li>
         <li>
-            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ ll
-        </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ git config --global user.email &quot;etomtomm@gmail.com&quot;</pre>
         </li>
+        <li>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ git config --list
+                user.name=EtomtomM
+                user.email=etomtomm@gmail.com</pre>
+        </li>
+        <li>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ git init
+                Initialized empty Git repository in /var/www/html/ethanm/projects/vcs/.git/</pre>
+        </li>
+        <li>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs/.git</b></font>$ ll
+                total 40
+                drwxr-xr-x 7 compsci compsci 4096 May 22 13:41 ./
+                drwxrwxr-x 6 compsci compsci 4096 May 22 13:41 ../
+                drwxr-xr-x 2 compsci compsci 4096 May 22 13:41 branches/
+                -rw-r--r-- 1 compsci compsci   92 May 22 13:41 config
+                -rw-r--r-- 1 compsci compsci   73 May 22 13:41 description
+                -rw-r--r-- 1 compsci compsci   23 May 22 13:41 HEAD
+                drwxr-xr-x 2 compsci compsci 4096 May 22 13:41 hooks/
+                drwxr-xr-x 2 compsci compsci 4096 May 22 13:41 info/
+                drwxr-xr-x 4 compsci compsci 4096 May 22 13:41 objects/
+                drwxr-xr-x 4 compsci compsci 4096 May 22 13:41 refs/</pre>
+        </li>
+        <li><pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs/.git</b></font>$ cd ..
+            </pre></li>
+        <li><pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ rm -rf .git</pre></li>
+        <li><pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ git status
+            On branch master
+            Changes not staged for commit:
+              (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+              (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+              (commit or discard the untracked or modified content in submodules)
+            
+                <font color="#CC0000">modified:   GitHubClones</font> (untracked content)
+                <font color="#CC0000">modified:   index.html</font>
+            
+            Untracked files:
+              (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+            
+                <font color="#CC0000">images/</font>
+            
+            no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+            </pre></li>
         <li>
             <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ touch .gitignore
         </pre>
@@ -86,10 +127,29 @@ Date:   Thu May 23 08:27:57 2019 -0600
     Initial Commit
             </pre>
         </li>
-        <li>
+        <li><!--Shows what new code was added-->
             <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ git diff
             </pre>
         </li>
+        <li>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ git remote add origin https://github.com/etomtomm/vcs</pre>
+        </li>
+        <li><pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ git pull origin master --allow-unrelated-histories
+            From https://github.com/etomtomm/vcs
+             * branch            master     -&gt; FETCH_HEAD
+            Already up to date.
+            </pre></li>
+        <li><pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/ethanm/projects/vcs</b></font>$ git push origin master
+            Username for &apos;https://github.com&apos;: EtomtomM 
+            Password for &apos;https://EtomtomM@github.com&apos;: 
+            Counting objects: 12, done.
+            Compressing objects: 100% (10/10), done.
+            Writing objects: 100% (12/12), 2.35 KiB | 2.35 MiB/s, done.
+            Total 12 (delta 3), reused 0 (delta 0)
+            remote: Resolving deltas: 100% (3/3), done.
+            To https://github.com/etomtomm/vcs
+               6046643..fad0d4a  master -&gt; master
+            </pre></li>
     </ol>
 
 </body>
